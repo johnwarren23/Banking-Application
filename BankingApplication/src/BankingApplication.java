@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class BankingApplication {
 
 	public static void main(String[] args) {
-		BankAccount bank = new BankAccount("John", "4656");
+		BankAccount bank = new BankAccount("John", "4022");
 		bank.showMenu();
 
 	}
