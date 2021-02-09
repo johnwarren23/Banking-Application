@@ -23,6 +23,11 @@ class BankAccount
 		customerID = cID;
 	}
 	
+	void checkBalance()
+	{
+		System.out.println("Balance: " + balance); //checks the current balance	
+	}
+	
 	void deposit(double amount)
 	{
 	
@@ -74,7 +79,7 @@ class BankAccount
 			{
 			case 'A':
 				System.out.println("------------------------------");
-				System.out.println("Balance: " + balance);
+				checkBalance();
 				System.out.println("------------------------------");
 				System.out.println("\n");
 				break;
