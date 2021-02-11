@@ -23,12 +23,12 @@ class BankAccount
 		customerID = cID;
 	}
 	
-	void checkBalance()
+	public void checkBalance()
 	{
 		System.out.println("Balance: " + balance); //checks the current balance	
 	}
 	
-	void deposit(double amount)
+	public void deposit(double amount)
 	{
 	
 			balance = balance + amount; //adds the amount you entered to your balance
@@ -37,7 +37,7 @@ class BankAccount
 		
 	}
 	
-	void withdraw(double amount)
+	public void withdraw(double amount)
 	{
 	
 			balance = balance - (amount); //subtracts the amount you entered from you balance
@@ -45,7 +45,7 @@ class BankAccount
 		
 	}
 	
-	void getPreviousTransaction()
+	public void getPreviousTransaction()
 	{
 		System.out.println("Withdrawn: " +  (previousTransaction)); //Math.abs turns the negative into a positive
 	}
@@ -53,7 +53,7 @@ class BankAccount
 
 	
 	
-	void showMenu()
+	public void showMenu()
 	{
 		char option = 0; //must have a starting value
 		
