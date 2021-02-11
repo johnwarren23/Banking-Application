@@ -12,6 +12,7 @@ public class BankingApplication {
 
 class BankAccount
 {
+	private amount = 0;
 	private double balance;
 	private double previousTransaction;
 	private String customerName;
@@ -40,15 +41,21 @@ class BankAccount
 	public void withdraw(double amount)
 	{
 	
-			balance = balance - (amount); //subtracts the amount you entered from you balance
+			balance = balance - (-amount); //subtracts the amount you entered from you balance
 			previousTransaction = amount; //stores the amount entered
 		
 	}
 	
 	public void getPreviousTransaction()
-	{
-		System.out.println("Withdrawn: " +  (previousTransaction)); //Math.abs turns the negative into a positive
-	}
+	
+		if(previousTransaction > 0)
+		{
+			System.out.println("Deposited: " + (previousTransaction));
+		}
+		else
+		{
+			System.out.println("Withdrawn: " + Math.abs(previousTransaction)); //Math.abs turns the negative into a positive
+		}
 	
 
 	
@@ -87,7 +94,7 @@ class BankAccount
 			case 'B': 
 				System.out.println("------------------------------");
 				System.out.println("Enter an amount to deposit: ");
-				double amount = keyboard.nextDouble();
+				amount = keyboard.nextDouble();
 				deposit(amount);
 				System.out.println("\n");
 				break;
@@ -95,8 +102,8 @@ class BankAccount
 				
 			case 'C':
 				System.out.println("Enter an amount to withdraw");
-				double amount2 = keyboard.nextDouble();
-				withdraw(amount2);
+				amount = keyboard.nextDouble();
+				withdraw(amount);
 				System.out.println("\n");
 				break;
 				
