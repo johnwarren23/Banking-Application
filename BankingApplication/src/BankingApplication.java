@@ -41,7 +41,7 @@ class BankAccount
 	public void withdraw(double amount)
 	{
 
-			balance = balance - (-amount); //subtracts the amount you entered from you balance. 	ex. (100) - (-(-20) = 80
+			balance = balance - (-(amount)); //subtracts the amount you entered from you balance. 	ex. (100) - (-(-20) = 80
 			previousTransaction = amount; //stores the amount entered
 
 	}
