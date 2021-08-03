@@ -55,6 +55,7 @@ class BankAccount
 		else
 		{
 			System.out.println("Withdrawn: " + Math.abs(previousTransaction)); //Math.abs turns the negative into a positive
+											   //Number must be entered as a negative for this statement to execute
 		}
 
 	}
